@@ -4,3 +4,8 @@ dist: trusty
 jdk: openjdk11
 before_install:
   - chmod +x mvnw
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_TOKEN
+  app: "java-book-store"
