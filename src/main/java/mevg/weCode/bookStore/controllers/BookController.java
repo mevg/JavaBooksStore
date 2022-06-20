@@ -15,10 +15,10 @@ import mevg.weCode.bookStore.dtos.BookDto;
 public class BookController {
     @GetMapping
     public ResponseEntity<List<BookDto>> getBooks(){
-        var book =  new BookDto();
+        BookDto book =  new BookDto();
         book.setTitle("my First Book");
 
-        var books = new ArrayList<BookDto>();
+        List<BookDto> books = new ArrayList<BookDto>();
         books.add(book);
         return ResponseEntity.ok(books);
     }
